@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Storage UI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <span class="material-icons">cloud</span>
+            <span>Cloud Storage</span>
+        </a>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Search in Storage">
+        </div>
+    </header>
+
+    <div class="main-content">
+        <aside class="sidebar">
+            <div class="sidebar-item active">
+                <span class="material-icons">folder</span>
+                <span>My Files</span>
+            </div>
+            <div class="sidebar-item">
+                <span class="material-icons">people</span>
+                <span>Shared with me</span>
+            </div>
+            <div class="sidebar-item">
+                <span class="material-icons">access_time</span>
+                <span>Recent</span>
+            </div>
+            <div class="sidebar-item">
+                <span class="material-icons">star</span>
+                <span>Starred</span>
+            </div>
+            <div class="sidebar-item">
+                <span class="material-icons">delete</span>
+                <span>Trash</span>
+            </div>
+        </aside>
+
+        <main class="files-grid" id="drop-zone">
+            <div class="drop-message">
+                <span class="material-icons">cloud_upload</span>
+                <p>Drop files here to upload</p>
+            </div>
+            <div class="file-card">
+                <div class="file-icon folder">
+                    <span class="material-icons">folder</span>
+                </div>
+                <div class="file-name">Documents</div>
+            </div>
+            <div class="file-card">
+                <div class="file-icon folder">
+                    <span class="material-icons">folder</span>
+                </div>
+                <div class="file-name">Images</div>
+            </div>
+            <div class="file-card">
+                <div class="file-icon">
+                    <span class="material-icons">description</span>
+                </div>
+                <div class="file-name">Project Report.pdf</div>
+            </div>
+            <div class="file-card">
+                <div class="file-icon">
+                    <span class="material-icons">image</span>
+                </div>
+                <div class="file-name">vacation.jpg</div>
+            </div>
+        </main>
+    </div>
+
+    <input type="file" id="file-input" multiple hidden>
+    <div class="upload-btn" onclick="document.getElementById('file-input').click()">
+        <span class="material-icons">add</span>
+    </div>
+
+    <div class="upload-progress" id="upload-progress">
+        <div class="upload-item">
+            <div class="upload-info">
+                <span class="material-icons file-type-icon">description</span>
+                <div class="upload-details">
+                    <div class="filename">Uploading...</div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+            <span class="material-icons cancel-upload">close</span>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
